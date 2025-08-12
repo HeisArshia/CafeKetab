@@ -18,14 +18,11 @@
 
     <!-- fonts -->
     <style>
-      @font-face {
-        font-family: "Dana";
-        src: url("fonts/dana-regular.woff2") format("woff2"),
-          url("fonts/dana-regular.woff") format("woff"),
-          url("fonts/dana-regular.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
-      }
+      @font-face { font-family: 'FarRooznameh'; src: url('font/Far_Rooznameh.woff2')
+format('woff2'), url('font/Far_Rooznameh.woff') format('woff'),
+url('font/Far_Rooznameh.ttf') format('truetype'); font-weight: normal;
+font-style: normal; } body { margin: 0; font-family: "FarRooznameh", Arial,
+sans-serif; direction: rtl; }
 
       html, body {
   overflow-x: hidden;
@@ -35,7 +32,7 @@
 
       body {
         margin: 0;
-        font-family: "Dana", Arial, sans-serif;
+        font-family: "FarRooznameh", Arial, sans-serif;
         direction: rtl;
         
       }
@@ -54,7 +51,8 @@
             rgba(55, 48, 43, 0.243) 50%,
             rgb(55, 48, 43)
           ),
-          url("img/pfrmkg.png");
+          url("img/backheadimgpng.webp");
+           /* url("img/pfrmkg.png"); */
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
@@ -102,7 +100,7 @@
         bottom: 10px;
         right: 16px;
         color: #fff;
-        font-size: 17px;
+        font-size: 22px;
         padding: 10px;
         margin-bottom: 10px;
        
@@ -112,13 +110,13 @@
         bottom: 10px;
         right: 16px;
         color: #fff;
-        font-size: 40px;
+        font-size: 50px;
         padding: 10px;
         margin-bottom: 40px;
       }
       @media (max-width: 600px) {
         .h1 {
-          font-size: 40px;
+          font-size: 50px;
           padding: 8px;
           bottom: 8px;
           right: 12px;
@@ -136,6 +134,10 @@
         padding: 10px 0;
         scrollbar-width: none;
       }
+      
+      .cat-name{
+        font-size: 20px;
+      }
 
       .category {
         min-width: 125px;
@@ -149,6 +151,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
       }
       .category:hover {
         background-color: #4a3627;
@@ -202,8 +205,12 @@
       }
       .menu-item p {
         margin: 5px 0;
-        font-size: 16px;
+        font-size: 28px;
       }
+      .book-tit {
+        padding-top: 35px;
+      }
+    
       
       
     </style>
@@ -225,48 +232,109 @@
         <h1 class="h1">کافه کتاب</h1>
         <h5 class="h2">ذهنت را بخوان روحت را بنوش</h5>
       </div>
-      <img src="img/real_logo-removebg-preview.png" alt="کافه کتاب" class="logo" />
+      <img src="img/realreallogo-removebg-preview.png" alt="کافه کتاب" class="logo" />
       <div class="content">
         <div class="categories">
-          <div class="category active" onclick="showCategory('breakfast')">
+          <div class="category active" onclick="showCategory('Book')">
+            <div class="category-icon">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="cat-name">
+
+              کتاب ها
+            </div>
+          </div>
+          <div class="category " onclick="showCategory('breakfast')">
             <div class="category-icon">
               <i class="fas fa-utensils"></i>
             </div>
-            صبحانه
+            <div class="cat-name">
+
+              صبحانه
+            </div>
           </div>
           <div class="category" onclick="showCategory('hot-hot-drink')">
             <div class="category-icon">
               <i class="fas fa-coffee"></i>
             </div>
-            نوشیدنی گرم
+            <div class="cat-name">
+              
+              نوشیدنی گرم
+            </div>
           </div>
           <div class="category" onclick="showCategory('ice-drink')">
             <div class="category-icon">
               <i class="fas fa-glass-martini"></i>
             </div>
-            نوشیدنی سرد
+            <div class="cat-name">
+              نوشیدنی سرد
+              
+            </div>
           </div>
           <div class="category" onclick="showCategory('hot-drink')">
             <div class="category-icon">
               <i class="fas fa-leaf"></i>
             </div>
-            دمنوش ها
-          </div>
-          <!-- <div class="category" onclick="showCategory('lunch')">
-            عصرانه
-            <div class="category-icon">
-              <i class="fas fa-coffee"></i>
+            <div class="cat-name">
+              
+              دمنوش ها
             </div>
-          </div> -->
+          </div>
+
           <div class="category" onclick="showCategory('shake')">
             <div class="category-icon">
               <i class="fas fa-glass-martini"></i>
             </div>
-             شیک ها و گلاسه
+            <div class="cat-name">
+              
+              شیک ها و گلاسه
+            </div>
           </div>
         </div>
 
-        <div id="breakfast" class="menu-items active">
+
+        <div id="Book" class="menu-items active">
+          <div class="menu-item">
+            <img src="img/book-mojezeh-shokr-gozari-removebg-preview.png" alt="معجزه شکرگذاری">
+            <p class="book-tit">معجزه شکر‌گذاری</p>
+          </div>
+          <div class="menu-item">
+            <img src="img/book-trust-god-timing.jpg" alt="به زمان‌بندی خدا اعتماد کن">
+            <p class="book-tit">به زمان‌بندی خدا اعتماد کن</p>
+          </div>
+          <div class="menu-item">
+            <img src="img/book-bi-shori.jpg" alt="بیشوری">
+            <p class="book-tit">بیشعوری</p>
+          </div>
+          <div class="menu-item">
+            <img src="img/book-toxic-man.jpg" alt="آدم‌های سمی">
+            <p class="book-tit">آدم‌های سمی</p>
+          </div>
+          <div class="menu-item">
+            <img src="img/book-atomic-habits.jpg" alt="عادت های اتمی">
+            <p class="book-tit">عادت‌های اتمی</p>
+          </div>
+          <div class="menu-item">
+            <img src="img/book-best-of-parvin.jpg" alt="اشعار پروین اعتصامی">
+            <p class="book-tit">اشقار‌ پروین‌ اعتصامی</p>
+          </div>
+          <div class="menu-item">
+            <img src="img/book-one-year-whiout-you.jpg" alt="روز بدون تو ۳۶۵">
+            <p class="book-tit">۳۶۵ روز بدون تو</p>
+          </div>
+          <div class="menu-item">
+            <img src="img/book-hundret-year-of-aloness.jpg" alt="صدسال تنهایی">
+            <p class="book-tit">صدسال تنهایی</p>
+          </div>
+          <div class="menu-item">
+            <img src="img/book-Love-in-the-Time-of-Cholera.jpg" alt="عشق سال های وبا">
+            <p class="book-tit">عشق سال‌های وبا</p>
+          </div>
+        </div>
+
+
+
+        <div id="breakfast" class="menu-items ">
           <div class="menu-item">
             <img src="img/englisi.png" alt="انگلیسی" />
             <p>انگلیسی</p>
